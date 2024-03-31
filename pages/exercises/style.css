@@ -17,13 +17,20 @@
     justify-content: center;
     flex-direction: column;
     border: 1px solid #1c9b3c;
-    background-color: #a3f070e5;
+    background: linear-gradient(#a3f070e5, #bceb9ee5, #e7f8dbe5, #fff);
     border-radius: 10px;
-    box-shadow: 2px 3px #525252;
+    box-shadow: 2px 4px #525252;
     max-width: 250px;
     padding: 0.8em;
 }
 
+.exercise-card:hover {
+    box-shadow: 2px 4px #fffefe;
+}
+
+.exercise-card:focus {
+    box-shadow: 2px 4px #fffefe;
+}
 .exercise-header {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
