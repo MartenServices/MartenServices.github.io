@@ -1,9 +1,16 @@
 .taal {
+    display: flex;
     background-color: #fff;
     border-bottom: 2px solid #000000;
+    box-shadow: #525252 1px 2px;
     padding: 0 2em;
+    overflow-x: scroll;
 }
 
+.category-title {
+    text-align: center;
+    font-size: clamp(1.5rem, 5vw, 2rem);
+}
 .exercise-container {
     padding: 0.5em;
 }
@@ -20,7 +27,7 @@
     background: linear-gradient(#a3f070e5, #bceb9ee5, #e7f8dbe5, #fff);
     border-radius: 10px;
     box-shadow: 2px 4px #525252;
-    max-width: 250px;
+    max-width: 150px;
     padding: 0.8em;
 }
 
@@ -31,14 +38,16 @@
 .exercise-card:focus {
     box-shadow: 2px 4px #fffefe;
 }
+
 .exercise-header {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: #094d1a;
+    font-size: clamp(1rem, 3vw, 1.3rem);
 }
 
 .exercise-text {
-    font-size: clamp(0.8rem, 5vw, 1.1rem);
+    font-size: clamp(0.8rem, 3vw, 1.1rem);
     color: #094d1a;
     text-align: center;
     line-height: 1.2rem;

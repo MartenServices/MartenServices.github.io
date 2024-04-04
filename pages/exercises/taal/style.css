@@ -1,0 +1,40 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 90vw;
+    height: 90vh;
+    margin: 1rem auto;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#woord {
+    font-size: 8rem;
+    margin: 0;
+    padding: 0;
+}
+
+@media screen and (max-width: 440px) {
+    #woord {
+        font-size: 6rem;
+    }
+}
+
+.button {
+    font-size: 2rem;
+    width: 100px;
+    margin-left: 1rem;
+    border: black 2px double;
+    padding: 0.5rem;
+}
+
+.button:hover {
+    scale: 1.2;
+    margin-inline: 3rem;
+}
