@@ -3,19 +3,20 @@
     background-color: #fff;
     border-bottom: 2px solid #000000;
     box-shadow: #525252 1px 2px;
-    padding: 0 2em;
+    padding: 0 1.5em;
     overflow-x: scroll;
 }
 
 .category-title {
-    text-align: center;
     font-size: clamp(.8rem, 5vw, 2rem);
-    color: #41068f;
+    color: #DAD7CD;
+        padding-left: 2rem;
 }
 .exercise-container {
-    padding: 0.5em;
+    padding: 0.5rem;
     flex: 1 1 0;
     min-width: 150px;
+    max-width: 200px;
 }
 
 .exercise-link {
@@ -27,15 +28,17 @@
     justify-content: center;
     flex-direction: column;
     border: 1px solid #1c9b3c;
-    background: linear-gradient(#a3f070e5, #bceb9ee5, #e7f8dbe5, #fff);
-    border-radius: 10px;
-    box-shadow: 2px 4px #525252;
-    padding: 0.8em;
+    background: linear-gradient(#a3f070e5, #bceb9ee5, #e7f8dbe5, #fff, #e7f8dbe5, #bceb9ee5, #a3f070e5);
+        border-radius: 15px;
+        box-shadow: 4px 4px 5px #08813b;
+        padding: 0.5em;
 }
 
 .exercise-card:hover {
     box-shadow: 2px 4px #dbcece;
-        background: linear-gradient(#a3f070e5, #bceb9ee5, #e7f8dbe5, #fff, #e7f8dbe5, #bceb9ee5, #a3f070e5);
+    border: 3px solid #ffffff;
+        background: linear-gradient(#a3f070e5, #bceb9ee5, #e7f8dbe5, #fff);
+        background-image: url(./assets/exercise-background-green.png);
 }
 
 .exercise-card:focus {
@@ -53,12 +56,15 @@
 .exercise-text {
     font-size: clamp(0.9rem, 2vw, 1.1rem);
         font-weight: 700;
-        color: #094d1a;
+        color: #05240d;
     text-align: center;
     line-height: clamp(1rem, 2vw, 1.1rem);
+    background-color: rgba(255, 255, 255, 0.9);
+        border-radius: 10px;
+        padding: 0.2rem;
 }
 .exercise-img {
-    border-radius: 10px;
+    border-radius: 40px;
     width: 100%;
     object-fit: cover;
     aspect-ratio: 0.2 / 0.2;

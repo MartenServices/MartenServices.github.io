@@ -1,5 +1,5 @@
 :root {
-    --main-bg-color-light: #DAD7CD;
+    --main-bg-color-light: #364736;
     --main-bg-color-dark: #344E41;
     --main-txt-color-light: #DAD7CD;
     --main-txt-color-dark: #344E41;
@@ -54,7 +54,7 @@ nav {
 .nav-link {
     font-size: clamp(0.5rem, 3vw, 1.2rem);
     text-decoration: none;
-    color: var(--main-txt-color-dark);
+    color: var(--main-txt-color-light);
     font-weight: bold;
 }
 
