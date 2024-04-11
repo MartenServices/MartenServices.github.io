@@ -10,9 +10,11 @@
 .category-title {
     text-align: center;
     font-size: clamp(1.5rem, 5vw, 2rem);
+    color: #5805c5;
 }
 .exercise-container {
     padding: 0.5em;
+    flex: 1 1 0;
 }
 
 .exercise-link {
@@ -27,12 +29,12 @@
     background: linear-gradient(#a3f070e5, #bceb9ee5, #e7f8dbe5, #fff);
     border-radius: 10px;
     box-shadow: 2px 4px #525252;
-    max-width: 150px;
     padding: 0.8em;
 }
 
 .exercise-card:hover {
-    box-shadow: 2px 4px #fffefe;
+    box-shadow: 2px 4px #dbcece;
+        background: linear-gradient(#a3f070e5, #bceb9ee5, #e7f8dbe5, #fff, #e7f8dbe5, #bceb9ee5, #a3f070e5);
 }
 
 .exercise-card:focus {
@@ -52,4 +54,10 @@
     text-align: center;
     line-height: 1.2rem;
     letter-spacing: 0.5px;
+}
+.exercise-img {
+    border-radius: 10px;
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
 }
