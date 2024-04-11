@@ -15,6 +15,7 @@
 .exercise-container {
     padding: 0.5em;
     flex: 1 1 0;
+    min-width: 150px;
 }
 
 .exercise-link {
@@ -44,19 +45,21 @@
 .exercise-header {
     text-align: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: bold;
     color: #094d1a;
-    font-size: clamp(.8rem, 2vw, 1.3rem);
+    font-size: clamp(1rem, 2vw, 1.9rem);
 }
 
 .exercise-text {
-    font-size: clamp(0.6rem, 2vw, 1.1rem);
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+        font-weight: 700;
         color: #094d1a;
     text-align: center;
-    line-height: clamp(0.6rem, 2vw, 1.1rem);
+    line-height: clamp(1rem, 2vw, 1.1rem);
 }
 .exercise-img {
     border-radius: 10px;
     width: 100%;
     object-fit: cover;
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 0.2 / 0.2;
 }
