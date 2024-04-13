@@ -1,5 +1,5 @@
 :root {
-    --main-bg-color-light: #0a9dff;
+    --main-bg-color-light: #588157;
         --main-bg-color-dark: hsl(150, 20%, 25%);
     --main-txt-color-light: #DAD7CD;
     --main-txt-color-dark: #344E41;
@@ -63,7 +63,7 @@ nav {
 }
 
 .nav-link:hover {
-    color: #588157;
+    color: var(--main-txt-color-dark);
 }
 
 .banner-container {
@@ -76,7 +76,7 @@ nav {
         background: linear-gradient(45deg, #344E41, #3A5A40, #588157, hsl(154, 20%, 25%), #588157, #3A5A40, #344E41);
         }
         
-        .banner-container::before,
+                                                                /* .banner-container::before, */
         .banner-container::after {
             content: '';
             position: absolute;
@@ -90,9 +90,9 @@ nav {
         
         }
         
-        .banner-container::before {
+                                /* .banner-container::before {
             top: 0;
-        }
+        */
         
         .banner-container::after {
             bottom: 0;
@@ -129,7 +129,7 @@ nav {
 }
 .button {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #75c5cf;
+    background-color: var(--main-bg-color-light);
     padding: 0.8em 1.2em;
     font-size: 1.2em;
     color: #000000;
@@ -139,8 +139,8 @@ nav {
 }
 
 .button:hover {
-    background-color: var(--main-bg-color-light);
-    color: black;
+    background-color: var(--main-bg-color-dark);
+        color: white;
     border: #DAD7CD 2px solid;
     box-shadow: #000000 2px 2px;
 }
