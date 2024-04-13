@@ -64,7 +64,7 @@ main {
     box-shadow: 2px 4px #dbcece;
     border: 3px solid #ffffff;
         background: linear-gradient(#a3f070e5, #bceb9ee5, #e7f8dbe5, #fff);
-        background-image: url(./assets/exercise-background-green.png);
+        background-image: url(../assets/exercise-background-green.png);
 }
 
 .exercise-card:focus {

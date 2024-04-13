@@ -1,6 +1,6 @@
 :root {
-    --main-bg-color-light: #364736;
-    --main-bg-color-dark: #344E41;
+    --main-bg-color-light: #0a9dff;
+        --main-bg-color-dark: hsl(150, 20%, 25%);
     --main-txt-color-light: #DAD7CD;
     --main-txt-color-dark: #344E41;
 
@@ -17,7 +17,12 @@
     box-sizing: border-box;
 }
 body {
-    background-color: var(--main-bg-color-light);
+    background: var(--main-bg-color-light);
+        color: white;
+        font-family: system-ui;
+        font-size: 1rem;
+        line-height: 1.5;
+        margin: 0;
 }
 
 
@@ -35,7 +40,7 @@ header {
 nav {
     margin: 0 auto;
     margin: 1.125em auto;
-    border-bottom: 3px solid #A3B18A;
+    border-bottom: 3px solid var(--main-txt-color-light);
 }
 
 .nav-list {
@@ -63,19 +68,47 @@ nav {
 }
 
 .banner-container {
-    width: 100%;
-    background: linear-gradient(#344E41, #3A5A40, #588157, #A3B18A, #DAD7CD);
-}
+    --spike-color: var(--main-bg-color-light);
+        --spike-width: 78px;
+        --spike-height: 20px;
+    
+        position: relative;
+        width: 100%;
+        background: linear-gradient(45deg, #344E41, #3A5A40, #588157, hsl(154, 20%, 25%), #588157, #3A5A40, #344E41);
+        }
+        
+        .banner-container::before,
+        .banner-container::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: var(--spike-height);
+            background-color: var(--spike-color);
+            -webkit-mask-image: url('./pages/assets/triangle.svg');
+            -webkit-mask-size: var(--spike-width) var(--spike-height);
+            mask-image: url('./pages/assets/triangle.svg');
+            mask-size: var(--spike-width) var(--spike-height);
+        
+        }
+        
+        .banner-container::before {
+            top: 0;
+        }
+        
+        .banner-container::after {
+            bottom: 0;
+            transform: rotate(.5turn);
+        }
 
 .banner {
     width: 80%;
     max-width: 600px;
-    padding: 2em;
+    padding: 3.5em;
     color: var(--main-txt-color-light);
 }
 
 .intro {
-    margin-bottom: 3.5em;
+    margin-bottom: 2.5em;
 }
 
 .intro-header {
@@ -88,22 +121,26 @@ nav {
     font-size: clamp(0.875rem, 2vw, 1.2rem);
 }
 
+.about-link {
+    color: #000000;
+    font-size: 1.3rem;
+}
 .join-button {
     margin-left: 0.5em;
 }
 .button {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #344E41;
+    background-color: #75c5cf;
     padding: 0.8em 1.2em;
     font-size: 1.2em;
-    color: #DAD7CD;
+    color: #000000;
     border-radius: 5px;
-    border-right: #00000060 solid 2px;
-    border-bottom: #00000060 solid 2px;
+    border: #000000 solid 1px;
+        box-shadow: #fff 2px 2px 5px;
 }
 
 .button:hover {
-    background-color: #4bfc48;
+    background-color: var(--main-bg-color-light);
     color: black;
     border: #DAD7CD 2px solid;
     box-shadow: #000000 2px 2px;
