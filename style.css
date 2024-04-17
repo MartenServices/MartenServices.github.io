@@ -26,8 +26,8 @@ body {
 header {
     width: 100%;
     background: var(--main-bg-color-light);
-        display: flex;
-        align-items: center;
+    display: grid;
+        grid-template-columns: .5fr 1fr;
         padding: .8em;
 }
 
@@ -36,16 +36,21 @@ header {
     margin: 0;
 }
 
+.logo span {
+    font-size: 8px;
+}
 .nav-toggle {
     display: none;
 }
 
 .nav-list {
     display: flex;
+    justify-content: right;
+        align-items: center;
     list-style: none;
     margin-block: 0;
+    padding: .5em;
 }
-
 
 .nav-link {
     font-size: clamp(0.5rem, 3vw, 1.2rem);
@@ -92,21 +97,22 @@ header {
     mask-image: url('./pages/assets/triangle.svg');
     mask-size: var(--spike-width) var(--spike-height);
     bottom: 0;
-        transform: rotate(.5turn);
-
+    transform: rotate(.5turn);
 }
 
 .banner {
     width: 100%;
     color: var(--main-txt-color-light);
-    padding-top: 1.8em;
+    padding-top: 4em;
         padding-left: .8em;
+        padding-bottom: 2em;
 }
 
 .intro-header {
-    margin-top: 1.5em;
-        font-size: clamp(2.125rem, 10vw, 3rem);
+    font-size: clamp(2.125rem, 10vw, 3rem);
     margin-bottom: 0.01em;
+    margin-top: 0;
+        padding-top: .8rem;
     line-height: 1.2;
 }
 
@@ -119,7 +125,9 @@ header {
     font-size: 1.3rem;
 }
 .join-button {
+    display: block;
     margin-left: 0.5em;
+    width: fit-content;
 }
 .button {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -145,7 +153,7 @@ header {
 
 
 /* Navbar small screens */
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 700px) {
     header {
         display: flex;
         justify-content: space-evenly;
@@ -161,6 +169,7 @@ header {
         left: 0;
         width: 100%;
         background: var(--main-bg-color-light);
+
     }
 
     .nav-toggle:checked~nav {
