@@ -99,12 +99,13 @@ header {
 .banner {
     width: 100%;
     color: var(--main-txt-color-light);
-    padding-top: .8em;
+    padding-top: 1.8em;
         padding-left: .8em;
 }
 
 .intro-header {
-    font-size: clamp(1.125rem, 8vw, 3.2rem);
+    margin-top: 1.5em;
+        font-size: clamp(2.125rem, 10vw, 3rem);
     margin-bottom: 0.01em;
     line-height: 1.2;
 }
