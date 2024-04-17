@@ -46,6 +46,7 @@ header {
     margin-block: 0;
 }
 
+
 .nav-link {
     font-size: clamp(0.5rem, 3vw, 1.2rem);
     color: var(--main-txt-color-light);
@@ -72,13 +73,14 @@ header {
 
 /* Banner section */
 .banner-container {
-        --spike-color: white;
+    --spike-color: white;
         --spike-width: 78px;
         --spike-height: 20px;
     position: relative;
         width: 100%;
-        background: linear-gradient(rgb(52, 78, 65), #3A5A40, #588157, hsl(154, 20%, 25%), #588157, #3A5A40, #344E41);
-        
+    background: linear-gradient(rgb(52, 78, 65), #3A5A40, #588157, hsl(154, 20%, 25%), #588157, #3A5A40, #344E41);
+}
+
 .banner-container::after {
     content: '';
     position: absolute;
@@ -103,7 +105,7 @@ header {
 
 .intro-header {
     font-size: clamp(1.125rem, 8vw, 3.2rem);
-    margin: 0.01em;
+    margin-bottom: 0.01em;
     line-height: 1.2;
 }
 
