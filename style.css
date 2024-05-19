@@ -51,7 +51,7 @@ header {
 }
 
 .nav-link {
-    font-size: clamp(0.5rem, 5vw, 1.3rem);
+    font-size: clamp(0.5rem, 7vw, 1.7rem);
     color: var(--main-txt-color-light);
     font-weight: bold;
     text-decoration: none;
@@ -222,7 +222,8 @@ header {
 
     .nav-item {
         margin-left: 0;
-        margin-bottom: 1.8em;
+        margin-bottom: .8em;
+        padding-block: .8em;
     }
 
 }
