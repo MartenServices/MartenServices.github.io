@@ -4,26 +4,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/8652a8699e.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../../style.css">
     <title>Contact</title>
 </head>
 
 <body>
-    <header>
-        <h1 class="logo">AfterSkool<span class="logo-strech">with Ryvi</span></h1>
+    <header class="header">
+        <a class="log-in-button" href="#" target="_blank" rel="noopener noreferrer">Log in</a>
+        <h1 class="logo">AfterSkool<span class="logo-strech">met Ryvi</span></h1>
         <input type="checkbox" id="nav-toggle" class="nav-toggle">
         <nav>
             <ul class="nav-list">
-                <li class="nav-item"><a class="active nav-link" href="../../index.html">Startpagina</a></li>
-                <li class="nav-item"><a class="nav-link" href="../exercises/exercises.html">Oefeningen</a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Groepen</a></li>
+                <li class="nav-item"><a class="nav-link" href="../../index.html">Startpagina</a></li>
+                <li class="nav-item"><a class="nav-link" href="../exercises/exercises.html">Oefeningen <i class="fa-solid fa-caret-down"></i></a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Groepen <i class="fa-solid fa-caret-down"></i></a></li>
                 <li class="nav-item"><a class="nav-link" href="#">Vragen?</a></li>
                 <li class="nav-item"><a class="nav-link" href="../about/about.html">Over ons</a></li>
-                <li class="nav-item"><a class="nav-link" href="./contact.html">Contact</a></li>
+                <li class="nav-item"><a class="nav-link active" href="./contact.html">Contact</a></li>
             </ul>    
         </nav>
-        <label for="nav-toggle" class="nav-toggle-label">
-            <span></span>
+        <label for="nav-toggle" class="nav-toggle-label open">
+            <span id="open-ham"></span>
+        </label>
+        <label for="nav-toggle" class="close">
+            <span  id="close-ham" ><i class="fa-solid fa-xmark"></i></span>
         </label>
     </header>
 </body>

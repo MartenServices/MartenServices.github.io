@@ -29,13 +29,26 @@ body {
     width: 100vw;
     background: var(--main-bg-color-dark);
     display: grid;
-    grid-template-columns: .5fr 1fr;
-    padding: .8em;
+    grid-template-columns: .5fr 1fr 1fr;
+    padding: .8rem;
+}
+
+.log-in-button {
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    color: var(--main-txt-color-dark);
+    background-color: yellow;
+    text-decoration: none;
+    margin-left: 2.5rem;
+    padding: .7rem;
+    border-radius: 5px;
 }
 
 .logo {
+    font-size: 1.4rem;
     color: whitesmoke;
     margin: 0 auto;
+    padding: .7rem;
 }
 
 .logo span {
@@ -46,12 +59,16 @@ body {
     display: none;
 }
 
+
 nav {
+    margin: auto;
     display: flex;
     justify-content: flex-end;
 }
 
 .nav-list {
+    display: flex;
+    justify-content: space-around;
     list-style: none;
     padding: .5em;
 }
@@ -61,7 +78,7 @@ nav {
 }
 
 .nav-link {
-    font-size: clamp(.5rem, 1vw, 1.2rem);
+    font-size: 1.3rem;
     color: var(--main-txt-color-light);
     font-weight: bold;
     text-decoration: none;
@@ -117,7 +134,7 @@ nav {
 .intro-header {
     text-align: center;
     font-size: 2rem;
-    color: yellow;
+    color: var(--main-txt-color-light);
     margin-block: 1em;
 
 }
@@ -285,12 +302,34 @@ main {
         transition: transform 400ms ease-in-out;
     }
 
+    .close span {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: .8em;
+        color: red;
+        font-size: 2rem;
+        opacity: 0;
+        transform: scale(1, 0);
+        transform-origin: right;
+        transition: transform 800ms ease-in-out;
+    }
+
     .nav-toggle:checked~nav {
         transform: scale(1, 1);
     }
 
-    .nav-toggle:checked~nav a {
+    .nav-toggle:checked~nav a{
         opacity: 1;
+    }
+
+    .nav-toggle:checked~.nav-toggle-label span {
+        display: none;
+    }
+
+    .nav-toggle:checked~.close span{
+        opacity: 1;
+        transform: scale(1 ,1);
     }
 
     .nav-toggle-label {
@@ -328,7 +367,12 @@ main {
         bottom: 7px;
     }
 
-    .nav-toggle-label-close {
+
+    /* 
+     /*   Kruis voor het sluiten van navbar
+       */
+
+    /* .nav-toggle-label-close {
         position: absolute;
         top: 0;
         left: 0;
@@ -363,7 +407,7 @@ main {
     .nav-toggle-label-close span::after {
         transform: rotate(-45deg);
         transform-origin: center;
-    }
+    } */
 
     .nav-list {
         display: flex;
