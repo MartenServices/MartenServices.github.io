@@ -35,20 +35,20 @@ body {
 
 .log-in-button {
     font-family: "Roboto", sans-serif;
-    font-weight: bold;
+    font-weight: bolder;
     color: var(--main-txt-color-dark);
     background-color: yellow;
     text-decoration: none;
-    margin-left: 2.5rem;
-    padding: .7rem;
-    border-radius: 5px;
+    margin-right: 1.5rem;
+    margin-left: 3.5rem;
+    border-radius: 10px;
+    padding: .4rem;
 }
 
 .logo {
     font-size: 1.4rem;
     color: whitesmoke;
-    margin: 0 auto;
-    padding: .7rem;
+    padding: .4rem;
 }
 
 .logo span {
@@ -336,7 +336,7 @@ main {
         position: absolute;
         top: 0;
         left: 0;
-        margin-left: .8em;
+        margin-left: 1em;
         height: 100%;
         display: flex;
         align-items: center;
