@@ -4,7 +4,7 @@
     --main-bg-color-light: hsl(150, 93%, 82%);
     --main-bg-color-dark: hsl(150, 20%, 25%);
     --main-txt-color-light: #DAD7CD;
-    --main-txt-color-dark: #1a2520;
+    --main-txt-color-dark: #31463c;
     --spike-color: rgb(231, 231, 231);
     --spike-width: 78px;
     --spike-height: 20px;
@@ -132,7 +132,8 @@ nav {
     text-align: center;
 }
 
-.intro-header {
+.intro-header,
+.sdl-title {
     text-align: center;
     font-size: 2rem;
     color: var(--main-txt-color-light);
@@ -187,7 +188,6 @@ nav {
     border-radius: 100%;
 }
 
-
 .fa-check {
     font-size: small;
     color: yellow;
@@ -217,7 +217,6 @@ nav {
     color: var(--main-txt-color-dark);
 }
 
-
 .button:hover {
     background-color: #588157;
     color: var(--main-txt-color-light);
@@ -236,25 +235,26 @@ nav {
 /*   */
 
 main {
-    padding-top: 2rem;
+    padding-block: 2rem;
     background-color: var(--spike-color);
 }
 
-.age-cards {
+.age-cards,
+.about-wrapper {
     width: 90%;
     margin: 0 auto ;
     display: flex;
     flex-direction: column;
 }
 
-.age-card {
+.card {
     background-color: hsl(0, 0%, 100%);
     box-shadow:  hsl(0, 0%, 74%) -1px 4px;
     border-radius: 15px;
     margin-block: .5em;
 }
 
-.age-card img {
+.card img {
     border-top-left-radius: 15px;
     border-bottom-left-radius: 15px;
     float: left;
@@ -266,8 +266,7 @@ main {
     object-position: center;
 }
 
-
-.age-card h2,
+.card h2,
 .content {
     color: var(--main-txt-color-dark);
     font-size: 1.1rem;
@@ -281,6 +280,32 @@ main {
     color: #588157;
 }
 
+.about-short {
+    margin-block: 3rem;
+    text-align: center;
+}
+
+.about-title {
+    color: var(--main-txt-color-dark);
+    margin-bottom: 1rem;
+}
+
+.features {
+    box-shadow: none;
+    background-color: inherit;
+    margin-bottom: 2rem;
+}
+
+.features img {
+    border-radius: none;
+    max-width: 130px;
+}
+
+.sdl-wrapper,
+.sdl-title{
+    color: var(--main-txt-color-dark);
+    text-align: center;
+}
 
 /* Navbar small screens */
 @media only screen and (max-width: 700px) {
@@ -367,48 +392,6 @@ main {
     .nav-toggle-label span::after {
         bottom: 7px;
     }
-
-
-    /* 
-     /*   Kruis voor het sluiten van navbar
-       */
-
-    /* .nav-toggle-label-close {
-        position: absolute;
-        top: 0;
-        left: 0;
-        margin-left: .8em;
-        height: 100%;
-        display: flex;
-        align-items: center;
-    }
-
-    .nav-toggle-label-close span::before,
-    .nav-toggle-label-close span::after {
-        content: '';
-        position: absolute;
-    }
-
-    .nav-toggle-label-close span,
-    .nav-toggle-label-close span::before,
-    .nav-toggle-label-close span::after {
-        display: block;
-        width: 2em;
-        height: 2px;
-        background: white;
-        border-radius: 2px;
-        position: relative;
-    }
-
-    .nav-toggle-label-close span::before {
-        transform: rotate(45deg);
-        transform-origin: center;
-    }
-
-    .nav-toggle-label-close span::after {
-        transform: rotate(-45deg);
-        transform-origin: center;
-    } */
 
     .nav-list {
         display: flex;
