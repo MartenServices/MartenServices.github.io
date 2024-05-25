@@ -304,9 +304,78 @@ main {
 
 /* Footer */
 footer {
+    font-family: "Roboto", sans-serif;
     background-color: var(--main-txt-color-dark);
     color: var(--main-txt-color-light);
     padding: .7rem;
+}
+
+.links-footer-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-links-footer {
+    position: relative;
+    display: flex;
+}
+
+.content-links-footer h4 {
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    padding-top: .3rem;
+}
+
+.content-links-footer {
+    position: relative;
+    margin-bottom: .7rem;
+}
+
+.list-link-footer li {
+    list-style-type: none;
+    font-size: .8rem;
+}
+
+.link-footer {
+    font-family: "Roboto", sans-serif;
+    color: var(--main-txt-color-light);
+    text-decoration: none;
+}
+
+.link-footer:hover,
+.link-footer:focus,
+.link-footer:active{
+    color: yellow;
+    font-style: oblique;
+}
+
+.newsletter-wrapper p {
+    font-size: .7rem;
+    font-weight: bold;
+}
+
+.newsletter-form-wrapper form {
+    margin-block: .7rem;
+    background-color: white;
+    width: fit-content;
+}
+
+.email-input,
+.email-button {
+    height: 40px;
+    padding: .3rem;
+    border: none;
+}
+
+.email-input {
+    display: inline;
+}
+
+.email-button {
+    width: 40px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1.5rem;
+    font-weight: bolder;
 }
 
 .extra-footer-links {
@@ -322,11 +391,11 @@ footer {
 .social-links {
     display: flex;
     justify-content: center;
-    gap: .7rem;
+    gap: 1.2rem;
 }
 
 .social-link img {
-    width: 30px;
+    width: 25px;
 }
 
 /* Navbar small screens */
