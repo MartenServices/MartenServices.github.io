@@ -228,12 +228,7 @@ nav {
     color: #00c241;
 }
 
-/*    */
-/*  */
 /*  Main section starts here */
-/*  */
-/*   */
-
 main {
     padding-block: 2rem;
     background-color: var(--spike-color);
@@ -305,6 +300,33 @@ main {
 .sdl-title{
     color: var(--main-txt-color-dark);
     text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: var(--main-txt-color-dark);
+    color: var(--main-txt-color-light);
+    padding: .7rem;
+}
+
+.extra-footer-links {
+    display: flex;
+    justify-content: space-evenly;
+    padding: .7rem;
+}
+
+.extra-footer-links a {
+    color: var(--main-txt-color-light);
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: .7rem;
+}
+
+.social-link img {
+    width: 30px;
 }
 
 /* Navbar small screens */
