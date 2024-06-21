@@ -1,0 +1,43 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-white: #f6f9f6;
+    --main-yellow: #ecff00;
+    --main-red: #fb031c;
+    --main-green: #11ff27; 
+    --main-blue: #003cfa;
+    --main-purple: #af09f1;
+    --main-orange: #ff9100;
+    --main-black: #1c1c1c; 
+    --main-grey: #979796;
+    --main-brown: #8a5207;
+    --main-br-10: 10px;
+}
+
+.main-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100dvh;
+    padding: .8rem;
+    background-color: var(--main-grey);
+}
+
+.game-wrapper {
+    display: grid;
+    grid-template-areas: 
+        "progresbar"
+        "cardOne"
+        "CardTwo";
+    width: 95%;
+    height: 90dvh;
+    margin: auto;
+    background-color: var(--main-white);
+    border-radius: 5px;
+}
