@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../../style.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/8652a8699e.js" crossorigin="anonymous"></script>
     <script defer src="script.js"></script>
@@ -12,90 +11,43 @@
 </head>
 
 <body>
-    <header class="header">
-        <a class="log-in-button" href="#" target="_blank" rel="noopener noreferrer">Log in</a>
-        <h1 class="logo">AfterSkool<span class="logo-strech">met Ryvi</span></h1>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <nav>
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="../../../index.html">Startpagina</a></li>
-                <li class="nav-item"><a class="nav-link" href="..//exercises.html">Oefeningen <i class="fa-solid fa-caret-down"></i></a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Groepen <i class="fa-solid fa-caret-down"></i></a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Vragen?</a></li>
-                <li class="nav-item"><a class="nav-link" href="../../about/about.html">Over ons</a></li>
-                <li class="nav-item"><a class="nav-link" href="../../contact/contact.html">Contact</a></li>
-            </ul>    
-        </nav>
-        <label for="nav-toggle" class="nav-toggle-label open">
-            <span id="open-ham"></span>
-        </label>
-        <label for="nav-toggle" class="close">
-            <span  id="close-ham" ><i class="fa-solid fa-xmark"></i></span>
-        </label>
-    </header>
-     <section>
-        <div class="game-tutorial">
-            <h3 class="title-game">🎉Woorden Avontuur Spel🎉</h3>
-            <img class="img-game" src="../../assets/tutorial-snel-lezen.png" alt="Different kind of words layed out.">
-            <p class="text-game">Hallo leeswonder! Klaar voor een spannend spel vol woordenpret? Het gaat erom dat je zo snel mogelijk woorden leest! Daag je vrienden en familie uit!</p>
-            <p class="text-game">Kies uit drie niveaus: 32 woorden (lang), 53 woorden (middel) en 68 woorden (kort). Hoe minder woorden, hoe langer ze zijn!</p>
-            <p class="text-game">Organiseer een wedstrijd om te zien wie de beste lezer is. Verzamel je vrienden en familie en beleef samen het Woorden Avontuur! Veel plezier! 📚🚀 </p>
-            <div class="step2">
-                <a href="#step2">STARTEN!</a>
+    <main>
+        <section id="start-display" class="start-display">
+            <div>
+                <h4>Snel lezen</h4>
+                <p>Kies de tijd en het aantal woorden dat je wilt proberen.</p>
             </div>
-        </div>
-    </section>
-    <section id="step2">
-        <div class="container game-level">  
-            <table>
-                <thead>
-                    <tr>
-                        <th scope="col">Week</th>
-                        <th scope="col">Aaantal Woorden</th>
-                        <th scope="col">Tijd</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">27</th>
-                        <td><input class="button" type="button" value="32">
-                            <input class="button" type="button" value="53">
-                            <input class="button" type="button" value="68">
-                        </td>
-                        <td>60s.</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">28</th>
-                        <td><input class="button" type="button" value="32">
-                            <input class="button" type="button" value="53">
-                            <input class="button" type="button" value="68">
-                        </td>
-                        <td>60s.</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">29</th>
-                        <td><input class="button" type="button" value="32">
-                            <input class="button" type="button" value="53">
-                            <input class="button" type="button" value="68">
-                        </td>
-                        <td>60s.</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-    <!-- The button for replay a game -->
-    <!-- <div><i class="fa-solid fa-rotate-left"></i></div> -->
-    <div class="container-game">
-        <div class="word-display">
-            <p id="woord"></p>
-        </div>
-        <div id="container-buttons" class="container">
-            <input id="a" class="button" type="button" value="32">
-            <input id="b" class="button" type="button" value="53">
-            <input id="c" class="button" type="button" value="68">
-        </div>
-    </div>
+            <div class="btn-wrapper">
+                <h5>60sec</h5>
+                <button class="easy" id="a" value="32">32</button>
+                <button class="easy" id="b" value="53">53</button>
+                <button class="easy" id="c" value="68">68</button>
+            </div>
+            <div class="btn-wrapper">
+                <h5>45sec</h5>
+                <button class="regular" id="d" value="32">32</button>
+                <button class="regular" id="e" value="53">53</button>
+                <button class="regular" id="f" value="68">68</button>
+            </div>
+            <div class="btn-wrapper">
+                <h5>30sec</h5>
+                <button class="hard" id="g" value="32">32</button>
+                <button class="hard" id="h" value="53">53</button>
+                <button class="hard" id="i" value="68">68</button>
+            </div>
+            <a class="back-link" href="../exercises.html">Terug naar oefeningen</a>
+        </section>
+        <section id="display" class="display-wrapper none"></section>
+        <section id="end-display" class="end-display none">
+            <p><span>Geweldig gedaan, leeskampioen!</span>Je hebt echt je best gedaan vandaag en dat is te zien! Elke keer dat je een woord leest,
+                 worden je leesvaardigheden beter en beter.<br><br>Klaar voor een volgende uitdaging?!
+            </p>
+            <div class="link-wrapper">
+                <a href="./words.html"><i class="restart-btn fa-solid fa-rotate-left"></i>Opnieuw</a>
+                <a href="../exercises.html"><i class="menu-btn fa-solid fa-house"></i>Terug naar menu</a>
+            </div>
+        </section>
+    </main>
 </body>
 
 </html>

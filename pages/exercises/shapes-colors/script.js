@@ -1,3 +1,6 @@
+
+
+// Picking colors code
 const whiteButton = document.getElementById("white");
 const yellowButton = document.getElementById("yellow");
 const redButton = document.getElementById("red");
@@ -28,5 +31,3 @@ orangeButton.addEventListener("click", () => colorChanger("#ff9100", "#d07700"))
 blackButton.addEventListener("click", () => colorChanger("#000000", "#1c1c1c"));
 greyButton.addEventListener("click", () => colorChanger("#979796", "#666565"));
 brownButton.addEventListener("click", () => colorChanger("#8a5207", "#693e05"));
-
-

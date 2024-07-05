@@ -24,6 +24,23 @@ body {
     line-height: 1.3rem;
 }
 
+.hide {
+    display: none;
+}
+
+.expand-btn {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin-left: .2rem;
+    padding-bottom: .8rem;
+}
+
+.fa-chevron-down {
+    background: var(--main-txt-color-dark);
+    color: var(--main-txt-color-light);
+}
+
 /* Screens max:1000px  navbar*/
 
 /* Mobile screens */
@@ -391,13 +408,15 @@ body {
     }
 
     .links-footer-wrapper>div {
-        margin-block: 1em;
+        margin-bottom: .5em;
     }
 
-    .content-links-footer h4 {
-        font-family: "Roboto", sans-serif;
-        font-size: 1rem;
-        padding-top: .3rem;
+    .links-footer-wrapper div h4 {
+        display: inline-block;
+    }
+
+    .content-links-footer {
+        z-index: 1;
     }
 
     .list-link-footer li {

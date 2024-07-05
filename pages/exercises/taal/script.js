@@ -15,32 +15,86 @@ const week28woordArray53 = ["licht", "plein", "knijp", "vrij", "iets", "wang", "
 const week28woordArray68 = ["zal", "moet", "heet", "daar", "weg", "rauw", "boeg", "bes", "heen", "das", "man", "woog", "bot", "as", "heel", "mei", "pot", "zag", "boot", "wit", "wel", "pauw", "dag", "bon", "weer", "met", "dik", "zeil", "roos", "mik", "peen",
                             "kok", "jip", "voet", "was", "les", "bek", "kou", "dun", "pijl", "geef", "haar", "reis", "doen", "jos", "bak", "keel", "dit", "haan", "moet", "wel", "doel", "zit", "joop", "zout", "pak", "mam", "let", "piet", "vuur",
                             "dat", "web", "paus", "mag", "vier", "zag", "nauw", "heup"];
+const week39woordArray68 = ["maan", "vaar", "uur", "guus", "geef", "lijn", "zaak", "muur", "raar", "vaak", "zeer", "maag", "zoom",  "veeg", "raam", "week", "zoek",
+                            "gum", "huil", "veeg", "mees", "naar", "veel", "gaan", "mooi", "vuur", "zeep", "kaas", "been", "meen", "loon", "eet", "maar", "moot", "zuig",
+                            "saar", "kies", "duw", "goot", "tel", "oor", "ook", "weer", "waar", "rook", "zeef", "raak", "zoon", "woon", "zool", "vaas", "aan", "neef", "neem", "weef",
+                            "wijn", "jos", "kauw", "duim", "reus", "zee", "geel", "zaag", "goot", "oom", "soep", "noot", 'roos',];
+const week39woordArray53 = ['lang', 'kunt', 'wijst', 'brood', 'vroeg', 'grond', 'mand', 'komt', 'lukt', 'zelfs', 'hoort', 'klein', 'roept', 'kijkt', 'griep', 'plaats', 'snel', 'geld', 'dorp', 'klas',
+                            'stad', 'staat', 'sneed', 'groot', 'paard', 'drie', 'werk', 'gans', 'vast', 'stuk', 'soms', 'thuis', 'ligt', 'graag', 'roept', 'broek', 'stuur', 'maakt', 
+                            'hond', 'rond', 'kwam', 'steeds', 'nooit', 'eend', 'moest', 'plaat', 'hebt', 'geeft', 'soort', 'danst', 'helm', 'zwerm', 'bank'];
+const week39woordArray32 = ['straten', 'zwerven', 'lopen', 'nemen', 'dalen', 'stelen', 'gezicht', 'mevrouw', 'geluid', 'benieuwd', 'akkerbouw', 'badkamer', 'regenworm',
+                            'verjaardag', 'onderwijs', 'sprinkhaan', 'woonwagen', 'verhaal', 'beslist', 'geleerd', 'struiken', 'vriezen', 'geven', 'kopen', 'heten',
+                            'komen', 'betaal', 'gezien', 'berouw', 'gemaakt', 'rustig', 'parkieten'];
 
-const element = document.getElementById("woord");
+//All HTML elements displays
+const startDisplay = document.getElementById('start-display');
+const display = document.getElementById('display')
+const endDisplay = document.getElementById('end-display')
+
+
+// Input from user
+// Amount of words
 const buttonA = document.getElementById("a");
 const buttonB = document.getElementById("b");
 const buttonC = document.getElementById("c");
-const tijdA = (60000 / week28woordArray32.length);
-const tijdB = (60000 / week28woordArray53.length);
-const tijdC = (60000 / week28woordArray68.length);
+const buttonD = document.getElementById("d");
+const buttonE = document.getElementById("e");
+const buttonF = document.getElementById("f");
+const buttonG = document.getElementById("g");
+const buttonH = document.getElementById("h");
+const buttonI = document.getElementById("i");
 
-buttonA.addEventListener('click', () => {
-    document.getElementById("container-buttons").remove();
-    for (let i = 0; i < week28woordArray32.length; i++) {
-        setTimeout(() => { element.innerHTML = week28woordArray32[i] }, tijdA * i);
-    }
-}, false)
+//Input from user
+//Amount of time
+const tijdA = (60000 / 32);
+const tijdB = (60000 / 53);
+const tijdC = (60000 / 68);
+const tijdD = (45000 / 32);
+const tijdE = (45000 / 53);
+const tijdF = (45000 / 68);
+const tijdG = (30000 / 32);
+const tijdH = (30000 / 53);
+const tijdI = (30000 / 68);
 
-buttonB.addEventListener('click', () => {
-    document.getElementById("container-buttons").remove();
-    for (let i = 0; i < week28woordArray53.length; i++) {
-        setTimeout(() => { element.innerHTML = week28woordArray53[i] }, tijdB * i);
-    }
-}, false)
+// Display words on screen
+function startWords(time, ...arr) { 
+    const selectedTime = time;
+    let words = arr;
+    let count = 0;
+    startDisplay.classList.toggle('none');
+    display.classList.toggle('none');
+    const intervalID = setInterval(() => { 
+        display.innerHTML = words[0][count];
+        count++
+        // Stop the interval after all iterations
+        if (count > words[0].length) {
+            clearInterval(intervalID)
+            setTimeout(end(), 6000);
+        };
+    }, selectedTime);
 
-buttonC.addEventListener('click', () => {
-    document.getElementById("container-buttons").remove();
-    for (let i = 0; i < week28woordArray68.length; i++) {
-        setTimeout(() => { element.innerHTML = week28woordArray68[i] }, tijdC * i);
-    }
-}, false)
+}
+
+// Display end screen 
+function end() {
+    display.classList.toggle('none');
+    endDisplay.classList.toggle('none');
+}
+
+
+//User initiates the game
+buttonA.addEventListener('click', () => { startWords(tijdA, week39woordArray32)}, false);
+buttonB.addEventListener('click', () => { startWords(tijdB, week39woordArray53)}, false);
+buttonC.addEventListener('click', () => { startWords(tijdC, week39woordArray68)}, false);
+buttonD.addEventListener('click', () => { startWords(tijdD, week39woordArray32)}, false);
+buttonE.addEventListener('click', () => { startWords(tijdE, week39woordArray53)}, false);
+buttonF.addEventListener('click', () => { startWords(tijdF, week39woordArray68)}, false);
+buttonG.addEventListener('click', () => { startWords(tijdG, week39woordArray32)}, false);
+buttonH.addEventListener('click', () => { startWords(tijdH, week39woordArray53)}, false);
+buttonI.addEventListener('click', () => { startWords(tijdI, week39woordArray68)}, false);
+
+
+
+
+
+
