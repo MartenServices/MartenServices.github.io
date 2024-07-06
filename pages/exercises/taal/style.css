@@ -33,12 +33,12 @@ button {
     box-shadow: #a1a1a1 3px 5px 2px;
     font-weight: bold;
     cursor: pointer;
+    color: #ffffff;
 }
 
 button:hover {
-    border: #344E41 solid 2px;
     box-shadow: #525252 3px 5px 2px;
-    text-decoration: overline;
+    text-decoration: underline;
 }
 
 .btn-wrapper {
@@ -51,15 +51,15 @@ button:hover {
 }
 
 .easy {
-    background-color: hsla(120, 100%, 51%, 0.616);
+    background: linear-gradient(hsl(120, 71%, 37%),hsl(120, 83%, 23%),hsl(120, 71%, 37%));
 }
 
 .regular {
-    background-color: hsla(219, 100%, 50%, 0.589);
+    background:linear-gradient(hsla(219, 100%, 50%, 0.589),hsl(219, 100%, 43%) , hsla(219, 100%, 50%, 0.589));
 }
 
 .hard {
-    background-color: hsla(0, 100%, 50%, 0.575);
+    background: linear-gradient(hsla(0, 100%, 50%, 0.575), hsl(0, 100%, 30%) , hsla(0, 100%, 50%, 0.575));
 }
 
 .back-link {
@@ -69,10 +69,9 @@ button:hover {
     font-weight: 500;
     font-family: 'Katin', sans-serif;
     text-decoration: none;
-    color: var(--main-txt-color-dark);
-    border: #000 solid 2.5px;
+    color: var(--main-txt-color-light);
+    background: linear-gradient(hsl(308, 57%, 43%),hsl(308, 79%, 22%), hsl(308, 57%, 43%));
     border-radius: .4em;
-    background-color: hsla(39, 100%, 50%, 0.795);
 }
 
 .start-display,
@@ -83,7 +82,7 @@ button:hover {
     justify-content: center;
     align-items: center;
     max-width: 80%;
-    border: 2px solid var(--main-bg-color-dark);
+    border: 2px solid rgb(0, 10, 143);
     border-radius: .2em;
     padding: .8em;
     color: #000;
@@ -131,11 +130,6 @@ button:hover {
     border: #344E41 double 1px;
     box-shadow: #a1a1a1 3px 4px 1px;
     background-color: hsl(39, 98%, 63%);
-}
-
-.link-wrapper a:hover {
-    scale: 1.2;
-    margin: .5em;
 }
 
 .none{
