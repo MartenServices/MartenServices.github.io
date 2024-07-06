@@ -44,14 +44,14 @@ body {
 /* Screens max:1000px  navbar*/
 
 /* Mobile screens */
-@media (max-width: 480px) {
+@media (max-width: 700px) {
     .header {
         background: var(--main-bg-color-dark);
         display: flex;
         position: fixed;
         width: 100%;
         z-index: 888;
-        padding: .8rem;
+        padding: 1rem;
     }
 
     nav {
@@ -300,7 +300,8 @@ body {
     .button {
         text-decoration: none;
         display: block;
-        margin: .7em auto;
+        margin-inline: auto;
+        margin-top: 1.5em;
         padding: .7em;
         width: 200px;
         border-radius: 100px;
@@ -339,6 +340,7 @@ body {
         box-shadow:  hsl(0, 0%, 74%) -1px 4px;
         border-radius: 15px;
         margin-block: .5em;
+        cursor: pointer;
     }
 
     .card img {
