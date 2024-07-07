@@ -1,0 +1,21 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui;
+}
+
+
+.xtr-categories-wrapper {
+    width: 100%;
+    margin-inline: auto;
+    margin-block: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1 1;
+    gap: 1rem
+}
+

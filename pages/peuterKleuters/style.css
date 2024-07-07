@@ -126,6 +126,8 @@ img {
 }
 
 /* Second section in main element */
+
+
 .all-categories h3 {
     font-size: 1.8rem;
     color: var(--main-txt-color-dark);
@@ -177,6 +179,16 @@ img {
     margin-right: .8rem;
 }
 
+.expand-btn button {
+    border: none;
+    background: transparent;
+    color: var(--main-txt-color-dark);
+    font-size: .9rem;
+    font-weight: bolder;
+    cursor: pointer;
+    margin-bottom: .9em;
+}
+
 /* Third section from main element starts here */
 .xtra-info {
     padding-inline: 1.5rem;
@@ -191,6 +203,20 @@ img {
 .xtra-info p {
     color: var(--main-txt-color-ld);
 }
+
+/* Xtra categories for groepen 3 t/m 8 */
+
+.xtr-categories-wrapper {
+    width: 100%;
+    margin-inline: auto;
+    margin-block: 2em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1 1;
+    gap: 1rem
+}
+
 
 /* /////////////////////////////////// */
 
