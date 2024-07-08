@@ -345,7 +345,6 @@ body {
         box-shadow:  hsl(0, 0%, 74%) -1px 4px;
         border-radius: 15px;
         margin-block: .5em;
-        cursor: pointer;
     }
 
     .card img {
