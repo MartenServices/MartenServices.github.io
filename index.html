@@ -4,7 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/8652a8699e.js" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c158dc6f39.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/pages/assets/nav/navbar.css">
+    <script defer src="/pages/assets/nav/script.js"></script>
     <script defer src="./script.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>ASWR || Homepage</title>
@@ -12,25 +14,104 @@
 
 <body>
     <header class="header">
-        <a class="log-in-button" href="#" target="_blank" rel="noopener noreferrer">Log in</a>
-        <h1 class="logo">AfterSkool<span class="logo-strech">met Ryvi</span></h1>
-        <input type="checkbox" id="nav-toggle" class="nav-toggle">
-        <nav>
-            <ul class="nav-list">
-                <li class="nav-item"><a class="active nav-link" href="./index.html">Startpagina</a></li>
-                <li class="nav-item"><a class="nav-link" href="./pages/exercises/exercises.html">Vakken <i class="fa-solid fa-caret-down"></i></a></li>
-                <li class="nav-item"><a class="nav-link" href="#">Groepen <i class="fa-solid fa-caret-down"></i></a></li>
-                <li class="nav-item"><a class="nav-link" href="./pages/about/about.html">Over ons</a></li>
-                <li class="nav-item"><a class="nav-link" href="./pages/contact/contact.html">Contact</a></li>
-            </ul>
-            <a style="color: yellow;" href="#">Login</a>    
+        <div class="menu">
+            <button id="menu" type="button" class="menu-toggle"><span class="burger"></span></button>
+        </div>
+        <button class="login-btn" type="button">Login</button>
+        <a class="home-link" href="/index.html">
+            <h2>AfterSkool<span class="mr-span">metRyvi</span></h2>
+        </a>
+        <nav class="hide navbar-in">
+            <button type="button" id="close-menu" class="close-menu"><i class="fa-solid fa-x"></i></button>
+            <div class="nav-option-wr">
+                <button type="button" id="group-btn" class="nav-btn">Groepen<span class="chevron-down"></span></button>
+                <ul id="groups" class="hide">
+                    <div class="group-text-wr">
+                        <h4>AfterSkool<span class="mr-span">metRyvi</span></h4>
+                        <p>Voor alle groepen van de basisschool</p>
+                    </div>
+                    <li><a class="category nav-group-link" href="pages/peuterKleuters/index.html">Peuters & Kleuters</a></li>
+                    <li><a class="category nav-group-link" href="pages/groep3en6/index.html">Groep 3 t/m 6</a></li>
+                    <li><a class="category nav-group-link" href="pages/groep7en8/index.html">Groep 7 en 8</a></li>
+                </ul>
+                <button type="button" id="course-btn" class="nav-btn">Vakken<span class="chevron-down"></span></button>
+                <ul id="courses" class="hide">
+                    <div>
+                        <a href="#"><h4>Bekijk alle vakken <i class="fa-solid fa-chevron-right"></i></h4></a>
+                    </div>
+                    <li>
+                        <a class="category" href="#">
+                            <img src="pages/assets/arithmetic-buttons-svgrepo-com.svg" alt="Nummers" >
+                            <h4>Rekenen</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="category" href="#">
+                            <img src="pages/assets/speaking-talking-chat-forum-svgrepo-com.svg" alt="Gesprek wolkjes" >
+                            <h4>Nederlandse taal</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="category" href="#">
+                                <img src="pages/assets/books-svgrepo-com.svg" alt="Een plaatje van e boek." >
+                                <h4>Begrijpend lezen</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="category" href="#">
+                            <img src="pages/assets/speaking-of-love-svgrepo-com.svg" alt="Verschillende vlaggen van verschillende landen" >
+                            <h4>Andere talen</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="category" href="#">
+                            <img src="pages/assets/abc-educational-book-svgrepo-com.svg" alt="De letters ABC in blokken" >
+                            <h4>Spelling</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="category" href="#">
+                            <img src="pages/assets/geography-map-svgrepo-com.svg" alt="Deel van een wereldbol met ogen erop geplakt" >
+                            <h4>Aarderijkskunde</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="category" href="#">
+                            <img src="pages/assets/traffic-light-svgrepo-com.svg" alt="Verkeersborden" >
+                            <h4>Verkeer</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="category" href="#">
+                            <img src="pages/assets/united-kingdom-uk-svgrepo-com.svg" alt="Cadeau afbeelding" >
+                            <h4>Engels</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="category" href="#">
+                            <img src="pages/assets/history-book-for-education-svgrepo-com.svg" alt="Cadeau afbeelding" >
+                            <h4>Geschiedenis</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="category" href="#">
+                            <img src="pages/assets/biology-education-science-svgrepo-com.svg" alt="Cadeau afbeelding" >
+                            <h4>Biologie</h4>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="category" href="#">
+                            <img src="pages/assets/map-svgrepo-com.svg" alt="Cadeau afbeelding" >
+                            <h4>Topografie</h4>
+                        </a>
+                    </li>
+                </ul>
+                <a class="nav-btn" href="/pages/about/about.html">Over ons</a>
+                <a class="nav-btn" href="#">Vragen?</a>
+                <a class="nav-btn" href="/pages/contact/contact.html">Contact</a>
+                <a class="nav-btn" href="#">Login</a>
+            </div>
         </nav>
-        <label for="nav-toggle" class="nav-toggle-label open">
-            <span id="open-ham"></span>
-        </label>
-        <label for="nav-toggle" class="close">
-            <span  id="close-ham" ><i class="fa-solid fa-xmark"></i></span>
-        </label>
     </header>
     <section class="banner-container">
         <div class="banner">
@@ -38,12 +119,12 @@
             <p class="intro-text"><i class="fa-solid fa-check"></i> Spelenderwijs meer vertrouwen.</p>
             <p class="intro-text"><i class="fa-solid fa-check"></i> Vrij van advertenties.</p>
             <p class="intro-text"><i class="fa-solid fa-check"></i> Past bij de lesstof van school.</p>
-            <a class="join button" href="./pages/exercises/exercises.html">Doe mee</a>
-            <a class="explore button" href="./pages/about/about.html">Ontdek meer over ons</a>
+            <a class="join button" href="/pages/exercises/exercises.html">Doe mee</a>
+            <a class="explore button" href="/pages/about/about.html">Ontdek meer over ons</a>
         </div>
         <aside class="review">
             <p class="review-text">`Door thuis te oefenen met AfterSkool<span class="with-ryvi">met Ryvi</span> gaat het op school steeds beter!`</p>
-            <img class="xsmall-picture" src="./pages/assets/review-pic.jpg" alt="foto van een reviewer">
+            <img class="xsmall-picture" src="/pages/assets/review-pic.jpg" alt="foto van een reviewer">
             <p class="review-text"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><span class="name"> Rebecca M.</span></p>
         </aside>
     </section>
@@ -114,7 +195,7 @@
         <section class="sdl-wrapper">
             <h2 class="sdl-title">Spelend. Doen. Leren.</h2>
             <p class="sdl-content">Ontdek motiverende quizzen en games.</p>
-            <a class="join button" href="./pages/exercises/exercises.html">Doe mee</a>
+            <a class="join button" href="/pages/exercises/exercises.html">Doe mee</a>
         </section>
     </main>
     <footer>

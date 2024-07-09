@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/8652a8699e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./style.css" >
-    <script defer src="script.js"></script>
+    <script src="https://kit.fontawesome.com/c158dc6f39.js" crossorigin="anonymous"></script>
+    <link href="../assets/nav/navbar.css" rel="stylesheet">
+    <script defer src="../assets/nav/script.js"></script>
     <title>Document</title>
 </head>
 <body>
-    <header>
+    <header class="header">
         <div class="menu">
             <button id="menu" type="button" class="menu-toggle"><span class="burger"></span></button>
         </div>
@@ -20,20 +20,20 @@
         <nav class="hide navbar-in">
             <button type="button" id="close-menu" class="close-menu"><i class="fa-solid fa-x"></i></button>
             <div class="nav-option-wr">
-                <button type="button" id="group-btn" class="nav-btn">Groepen <i class="fa-solid fa-caret-down"></i> </button>
+                <button type="button" id="group-btn" class="nav-btn">Groepen<span class="chevron-down"></span></button>
                 <ul id="groups" class="hide">
-                    <div>
+                    <div class="group-text-wr">
                         <h4>AfterSkool<span class="mr-span">metRyvi</span></h4>
                         <p>Voor alle groepen van de basisschool</p>
                     </div>
-                    <li><a href="../peuterKleuters/index.html">Peuters & Kleuters</a></li>
-                    <li><a href="../groep3en6/index.html">Groep 3 t/m 6</a></li>
-                    <li><a href="../groep7en8/index.html">Groep 7 en 8</a></li>
+                    <li><a class="category nav-group-link" href="../peuterKleuters/index.html">Peuters & Kleuters</a></li>
+                    <li><a class="category nav-group-link" href="../groep3en6/index.html">Groep 3 t/m 6</a></li>
+                    <li><a class="category nav-group-link" href="../groep7en8/index.html">Groep 7 en 8</a></li>
                 </ul>
-                <button type="button" id="course-btn" class="nav-btn">Vakken  <i class="fa-solid fa-caret-down"></i></button>
+                <button type="button" id="course-btn" class="nav-btn">Vakken<span class="chevron-down"></span></button>
                 <ul id="courses" class="hide">
                     <div>
-                        <a href="#">Bekijk alle vakken <i class="fa-solid fa-chevron-right"></i></a>
+                        <a href="#"><h4>Bekijk alle vakken ></h4></a>
                     </div>
                     <li>
                         <a class="category" href="#">
