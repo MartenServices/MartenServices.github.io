@@ -17,7 +17,7 @@ header {
     z-index: 99;
     display: grid;
     grid-template-areas: 
-        "logo logo login menu";
+        "logo login menu";
     background: rgb(8, 59, 11);
     
 }
@@ -38,6 +38,7 @@ header {
 .menu-toggle {
     background: transparent;
     border: none;
+    margin-right: 1rem;
 }
 
 .login-btn {
