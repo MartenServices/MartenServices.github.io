@@ -25,15 +25,6 @@ body {
 }
 
 @media (max-width: 740px) {
-    *,
-    *::before,
-    *::after {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        font-family: system-ui;
-    }
-    
     /* Header and elements start here */
     .header {
         width: 100%;
