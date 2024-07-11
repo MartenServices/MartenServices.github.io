@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&display=swap');
+
+:root {
+    --main-inline-p-sm: .8rem;
+    --main-inline-p-m: 1.2rem;
+}
+
+
+.banner-wr,
+.courses-display {
+    width: 100%;
+    text-align: center;
+    padding-inline: var(--main-inline-p-sm);
+}
+
+.all-courses-wr {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: .5em;
+}
+
+.img-banner-wr img {
+    margin-top: 3em;
+    width: 80%;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    object-position: center;
+}
+
+.banner-wr h2 {
+    font-size: 2rem;
+    font-family: 'Inconsolata';
+    font-weight: bolder;
+}
+
+.banner-wr p,
+.courses-display p
+{
+    font-family: 'Inconsolata', monospace;
+    line-height: 1.3rem;
+    font-weight: 500;
+}
+
+.courses-display p {
+    font-weight: 300;
+    font-size: .9rem;
+}
+
+.courses-display h3 {
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.6rem;
+}
+
+.btn-vakken {
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.3rem;
+    padding: var(--main-inline-p-sm);
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50px;
+    margin-bottom: 1em;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-vakken i {
+    font-size: .8rem;
+    margin-inline: .3rem;
+}
+
+.select-grade {
+    font-family: 'Inconsolata', monospace;
+    font-size: 1.2rem;
+    font-weight: 700;
+    padding-inline: var(--main-inline-p-m);
+    padding-block: var(--main-inline-p-sm);
+    margin-block: 1rem;
+    border-radius: 50px;
+    border: none;
+    background-color: rgb(241, 255, 52);
+}
+
+.mr-span {
+    font-family: 'Inconsolata', monospace;
+}
+
+.category {
+    align-items: center;
+}
+
+.category img {
+    max-width: 40px;
+}

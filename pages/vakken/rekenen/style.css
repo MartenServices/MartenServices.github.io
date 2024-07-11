@@ -1,0 +1,18 @@
+:root {
+    --main-bg-color: hsl(290, 100%, 77%);
+}
+
+
+
+.header{
+    background: var(--main-bg-color);
+}
+
+.banner-wr {
+    background: var(--main-bg-color);
+}
+
+.btn-vakken {
+    background-color: rgb(245, 255, 99);
+    font-weight: 600;
+}

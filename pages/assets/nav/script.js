@@ -17,7 +17,7 @@ closeMenuBtn.addEventListener('click', () => {
     navbar.classList.toggle('hide')
 });
 // Dropdown menu in navbar
-let dropdown = document.getElementsByClassName("nav-btn");
+let dropdown = document.querySelectorAll(".nav-btn");
 // add eventlistener to al dropdown buttons in the nav
 for (let i = 0; i < dropdown.length; i++) {
     dropdown[i].addEventListener("click", function() {
