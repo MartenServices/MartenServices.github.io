@@ -1,5 +1,5 @@
 :root {
-    --main-bg-color: hsl(290, 100%, 77%);
+    --main-bg-color: hsl(276, 73%, 72%);
 }
 
 
@@ -15,4 +15,9 @@
 .btn-vakken {
     background-color: rgb(245, 255, 99);
     font-weight: 600;
+}
+
+footer {
+    background-color: var(--main-bg-color);
+    color: white;
 }

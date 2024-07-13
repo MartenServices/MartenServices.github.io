@@ -80,7 +80,7 @@
     margin-block: 1rem;
     border-radius: 50px;
     border: none;
-    background-color: rgb(241, 255, 52);
+    background-color: hsl(64, 100%, 70%);
 }
 
 .mr-span {
