@@ -12,6 +12,7 @@ const mathGradeInfo = ['Bij AfterSkool<span class="mr-span">metRyvi</span> legge
 
 
 selectedGrade.addEventListener('click', () => {
-    paragraphGrade.innerHTML = mathGradeInfo[selectedGrade.value];
-    console.log(selectedGrade.value);
+    setTimeout(() => {
+        paragraphGrade.innerHTML = mathGradeInfo[selectedGrade.value];
+    }, 1000);
 })
