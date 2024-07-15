@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/pages/assets/nav/navbar.css">
     <script defer src="/pages/assets/nav/script.js"></script>
     <script defer src="/pages/vakken/script.js"></script>
+    <script defer src="./script.js"></script>
     <link rel="stylesheet" href="/pages/vakken/style.css">
     <link rel="stylesheet" href="/pages/assets/footer/footer.css">
     <link rel="stylesheet" href="style.css">
@@ -72,7 +73,7 @@
                     <li>
                         <a class="category" href="#">
                             <img src="/pages/assets/geography-map-svgrepo-com.svg" alt="Deel van een wereldbol met ogen erop geplakt" >
-                            <h4>Aarderijkskunde</h4>
+                            <h4>Aardrijkskunde</h4>
                         </a>
                     </li>
                     <li>
@@ -147,7 +148,7 @@
         <section class="all-courses-wr">
             <div class="select-grade-wr">
                 <select class="select-grade" name="grade" id="grade">
-                    <option value="peuters">Peuters</option>
+                    <option value="0">Peuters</option>
                     <option value="1">Groep 1</option>
                     <option value="2">Groep 2</option>
                     <option value="3">Groep 3</option>
@@ -158,7 +159,7 @@
                     <option value="8">Groep 8</option>
                 </select>
             </div>
-            <div class="courses-display">
+            <div id="courses-display" class="courses-display">
                 <p>Bij AfterSkool<span class="mr-span">metRyvi</span> leggen we de basis voor rekenvaardigheden al bij de allerkleinsten. 
                     Onze interactieve en speelse oefeningen zijn speciaal ontworpen voor peuters, zodat zij op een leuke manier cijfers 
                     leren herkennen en eenvoudige rekenconcepten begrijpen.<br>
