@@ -74,8 +74,25 @@ selectedGrade.addEventListener('change', () => {
 });
 // Track the grade that needs to be displayed mobile focus
 selectedGrade.addEventListener('blur', () => {
+    // change info in paragraph
     paragraphGrade.innerHTML = mathGradeInfo[selectedGrade.value];
-});
+    // Remove the courses displayed
+    while (coursesGrade.firstChild) {
+        coursesGrade.removeChild(coursesGrade.firstChild)
+    };
+    // Add all new courses
+    for (let i = 0; i < mathGradeTitle[selectedGrade.value].length; i++) {
+        let linkRoute = document.createElement('a');
+        linkRoute.href = '#';
+        linkRoute.classList.add('category');
+        let img = new Image();
+        img.src = mathGradeImg[selectedGrade.value][i];
+        let title = document.createElement('h4');
+        title.innerHTML = mathGradeTitle[selectedGrade.value][i];
+        linkRoute.appendChild(img);
+        linkRoute.appendChild(title);
+        coursesGrade.appendChild(linkRoute);
+    };});
 
 
 
