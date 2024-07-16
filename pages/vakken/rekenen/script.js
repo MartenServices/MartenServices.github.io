@@ -1,5 +1,4 @@
 const selectedGrade = document.getElementById('grade');
-const selectedOption = selectedGrade.querySelectorAll('option').selected;
 const display = document.getElementById('courses-display');
 const paragraphGrade = display.querySelector('p');
 const mathGradeInfo = ['Bij AfterSkool<span class="mr-span">metRyvi</span> leggen we de basis voor rekenvaardigheden al bij de allerkleinsten. Onze interactieve en speelse oefeningen zijn speciaal ontworpen voor peuters, zodat zij op een leuke manier cijfers leren herkennen en eenvoudige rekenconcepten begrijpen.<br>Met kleurrijke en boeiende activiteiten maken we het leren van getallen een spannend avontuur. Peuters leren tellen, eenvoudige vormen herkennen en beginnen met basisbegrippen zoals meer en minder. Onze aanpak stimuleert nieuwsgierigheid en maakt het leerproces leuk en motiverend.','Met vrolijke en kleurrijke activiteiten leren kinderen in groep 1 cijfers herkennen, tellen en eenvoudige vormen benoemen. Ze ontdekken de magie van getallen door spelletjes die speciaal zijn afgestemd op hun leeftijd en ontwikkelingsniveau. Onze aanpak zorgt ervoor dat kinderen spelenderwijs leren, nieuwsgierig blijven en plezier hebben in het leerproces. <br>AfterSkool<span class="mr-span">metRyvi</span> helpt kinderen in groep 1 om zelfvertrouwen op te bouwen in hun rekenvaardigheden en een positieve houding ten opzichte van leren te ontwikkelen. Samen zetten we de eerste stappen in de fascinerende wereld van rekenen!',
@@ -12,11 +11,11 @@ const mathGradeInfo = ['Bij AfterSkool<span class="mr-span">metRyvi</span> legge
 ];
 
 
-selectedGrade.addEventListener('click', () => {
+selectedGrade.addEventListener('change', () => {
         paragraphGrade.innerHTML = mathGradeInfo[selectedGrade.value];
 });
 
-selectedGrade.addEventListener('onfocusout', () => {
+selectedGrade.addEventListener('blur', () => {
     paragraphGrade.innerHTML = mathGradeInfo[selectedGrade.value];
 });
 
