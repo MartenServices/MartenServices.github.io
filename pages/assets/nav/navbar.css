@@ -209,7 +209,7 @@ body {
         font-style: italic;
     }
     
-    .chevron-down{
+    /* .chevron-down{
         position: relative;
         margin-left: .4em;
     }
@@ -238,7 +238,7 @@ body {
     .chevron-down::after {
         transform: rotate(-45deg);
         left: 0px;
-    }
+    } */
     
     li {
         list-style-type: none;
