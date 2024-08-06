@@ -27,14 +27,25 @@
     display: inline-block;
 }
 
-#afterskool {
-    display: none;
+/* links show up */
+#afterskool,
+#faq,
+#sources {
     width: 30px;
 }
 
 #afterskool:checked ~ .content-links-footer {
     display: block;
 }
+
+#faq:checked ~ .content-links-footer {
+    display: block;
+}
+
+#sources:checked ~ .content-links-footer {
+    display: block;
+}
+
 
 .chevron-down-label {
     display: inline-block;
@@ -54,10 +65,9 @@
 .chevron-down::after {
     position: absolute;
     content: "";
-    width: 17px;
-    height: 5px;
+    width: 10px;
+    height: 2px;
     bottom: 3px;
-    left: 10px;
     border-radius: 50%;
     background-color: var(--main-bg-color-light);
 }
@@ -69,7 +79,7 @@
 
 .chevron-down::after {
     transform: rotateZ(-45deg);
-    left: 15px;
+    left: 11px;
 }
 
 .content-links-footer {

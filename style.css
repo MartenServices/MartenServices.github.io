@@ -79,14 +79,14 @@ body {
     .intro-header,
     .sdl-title {
         text-align: center;
-        font-size: 2rem;
+        font-size: clamp(2.3rem, 8vw, 5rem);
         color: var(--main-txt-color-light);
         margin-block: 1em;
 
     }
 
     .intro-text {
-        font-size: clamp(1rem, 2vw, 1.2rem);
+        font-size: clamp(1.3rem, 2vw, 1.2rem);
         padding-inline: .4em;
     }
 
@@ -154,10 +154,10 @@ body {
         margin-inline: auto;
         margin-top: 1.5em;
         padding: .7em;
-        width: 200px;
-        border-radius: 100px;
-        font-size: 1rem;
-        font-family: "Roboto", sans-serif;
+        width: max-content;
+        border-radius: 30px;
+        font-size: 1.3rem;
+        font-family: "Montserrat", sans-serif;
         font-weight: 600;
         color: var(--main-txt-color-dark);
     }
@@ -230,12 +230,13 @@ body {
     }
 
     .about-title {
+        font-size: 2rem;
         margin-bottom: 1rem;
         color: var(--main-txt-color-dark);
     }
 
     .autoShow {
-        animation: autoShow 1s both;
+        animation: autoShow 1ms both;
         animation-timeline: view(70% 5%);
     }
 
