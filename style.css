@@ -235,7 +235,7 @@ body {
     }
 
     .autoShow {
-        animation: autoShow both;
+        animation: autoShow 1s both;
         animation-timeline: view(70% 5%);
     }
 
