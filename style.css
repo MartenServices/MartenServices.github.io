@@ -19,6 +19,7 @@
 } 
 
 body {
+    scroll-behavior: smooth;
     font-family: system-ui;
     font-size: 1rem;
     line-height: 1.5;
@@ -221,8 +222,6 @@ body {
     .content {
         font-size: .85rem;
         color: #588157;
-        animation: headerUp both;
-        animation-timeline: view(70% 5%);
     }
 
     .about-short {
@@ -233,12 +232,15 @@ body {
     .about-title {
         margin-bottom: 1rem;
         color: var(--main-txt-color-dark);
-        animation: headerUp both;
+    }
+
+    .autoShow {
+        animation: autoShow both;
         animation-timeline: view(70% 5%);
     }
 
 
-    @keyframes headerUp {
+    @keyframes autoShow {
         from {
             opacity: 0;
             transform: translateY(200px) scale(0.3);

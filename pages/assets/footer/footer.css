@@ -74,21 +74,8 @@
 
 .content-links-footer {
     display: none;
-    z-index: 1;
-    animation-name: flowUp;
-    animation-duration: .5s;
-    animation-timeline: view(block);
 }
 
-@keyframes flowUp {
-    from {
-        transform: scaleY(0);
-        transform-origin: top;
-    }
-    to {
-        transform: scaleY(1);
-    }
-}
 
 .list-link-footer li {
     list-style-type: none;
