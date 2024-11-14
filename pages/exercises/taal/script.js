@@ -49,13 +49,13 @@ const buttonI = document.getElementById("i");
 
 //Input from user
 //Amount of time
-const tijdA = (60000 / 32);
+const tijdA = (60000 / 63);
 const tijdB = (60000 / 53);
 const tijdC = (60000 / 68);
-const tijdD = (45000 / 32);
+const tijdD = (45000 / 63);
 const tijdE = (45000 / 53);
 const tijdF = (45000 / 68);
-const tijdG = (30000 / 32);
+const tijdG = (30000 / 63);
 const tijdH = (30000 / 53);
 const tijdI = (30000 / 68);
 
