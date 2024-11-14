@@ -87,14 +87,14 @@ function end() {
 
 //User initiates the game
 buttonA.addEventListener('click', () => { startWords(tijdA, week5woordArray63)}, false);
-buttonB.addEventListener('click', () => { startWords(tijdB, week5woordArray63)}, false);
-buttonC.addEventListener('click', () => { startWords(tijdC, week5woordArray63)}, false);
+// buttonB.addEventListener('click', () => { startWords(tijdB, week5woordArray63)}, false);
+// buttonC.addEventListener('click', () => { startWords(tijdC, week5woordArray63)}, false);
 buttonD.addEventListener('click', () => { startWords(tijdD, week5woordArray63)}, false);
-buttonE.addEventListener('click', () => { startWords(tijdE, week5woordArray63)}, false);
-buttonF.addEventListener('click', () => { startWords(tijdF, week5woordArray63)}, false);
+// buttonE.addEventListener('click', () => { startWords(tijdE, week5woordArray63)}, false);
+// buttonF.addEventListener('click', () => { startWords(tijdF, week5woordArray63)}, false);
 buttonG.addEventListener('click', () => { startWords(tijdG, week5woordArray63)}, false);
-buttonH.addEventListener('click', () => { startWords(tijdH, week5woordArray63)}, false);
-buttonI.addEventListener('click', () => { startWords(tijdI, week5woordArray63)}, false);
+// buttonH.addEventListener('click', () => { startWords(tijdH, week5woordArray63)}, false);
+// buttonI.addEventListener('click', () => { startWords(tijdI, week5woordArray63)}, false);
 
 
 
