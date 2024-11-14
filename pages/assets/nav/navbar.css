@@ -24,14 +24,31 @@ body {
     line-height: 1.5;
 }
 
-@media (max-width: 740px) {
+/* hidden elements */
+.price-btn {
+    display: none;
+}
+
+@media (min-width: 481px) {
+    /* Styles for small to medium devices */
+    .price-btn {
+        display: inline-block;
+        grid-area: login;
+        margin-top: 0;
+    }
+  }
+
+
+@media (max-width: 767px) {
     /* Header and elements start here */
     .header {
         width: 100%;
         padding-block: 1.5em; 
+        padding-inline: 1em;
         position: fixed;
         z-index: 99;
         display: grid;
+        grid-template-columns: auto 1fr auto;
         grid-template-areas: 
             "logo login menu";
         background: var(--main-bg-color-dark);
@@ -42,6 +59,7 @@ body {
         color: rgb(255, 252, 245);
         text-decoration: none;
         padding-left: .8em;
+        margin-right: .3rem;
     }
     
     .menu {
@@ -58,9 +76,16 @@ body {
         width: 30px;
         height: 100%;
     }
+
+    .header-btns {
+        grid-area: login;
+        display: flex;
+        justify-content: end;
+    }
     
     .login-btn {
         grid-area: login;
+        display: inline-block;
         border: none;
         border-radius: 20px;
         background-color: rgb(252, 252, 75);
@@ -68,6 +93,7 @@ body {
         font-weight: bold;
         letter-spacing: 1px;
         cursor: pointer;
+        margin-top: 0;
     }
     
     .burger,

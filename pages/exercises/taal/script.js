@@ -25,6 +25,9 @@ const week39woordArray53 = ['lang', 'kunt', 'wijst', 'brood', 'vroeg', 'grond', 
 const week39woordArray32 = ['straten', 'zwerven', 'lopen', 'nemen', 'dalen', 'stelen', 'gezicht', 'mevrouw', 'geluid', 'benieuwd', 'akkerbouw', 'badkamer', 'regenworm',
                             'verjaardag', 'onderwijs', 'sprinkhaan', 'woonwagen', 'verhaal', 'beslist', 'geleerd', 'struiken', 'vriezen', 'geven', 'kopen', 'heten',
                             'komen', 'betaal', 'gezien', 'berouw', 'gemaakt', 'rustig', 'parkieten'];
+const week5woordArray63 = ["meneer","wiebelen", "ontsnapt", "aardig", "midden", "duizelig", "flikflak", "springt", "salto", "tekening", "gooit", "bezorgt", "euro", "sterretje", "langs", "werkend", "piraat", "tekening", "giraffen", "olifant", "jarig", "sigaar", "heerlijk",
+                            "mevrouw", "kinderboerderij", "piraat", "hartelijk", "figuur", "giraffen", "jezelf", "gevaarlijk", "ketting", "dobberen", "mobiel", "rekenen", "vooruit", "drinkbakje", "deftig", "kinderen", "vrolijk", "achterste", "thuis", "gevaarlijkste", "iedereen", "leeuwen", "knuffelen", "graspolletje", 
+                            "piepklein", "burgemeester", "garantie", "boerderijen", "vakantie", "konijntjes", "gepraat", "uitstekend", "staartje", "reuzenhaai", "portie", "uitzondering", "haaienvin", "vleeseter", "andere", "idee",];
 
 //All HTML elements displays
 const startDisplay = document.getElementById('start-display');
@@ -83,15 +86,15 @@ function end() {
 
 
 //User initiates the game
-buttonA.addEventListener('click', () => { startWords(tijdA, week39woordArray32)}, false);
-buttonB.addEventListener('click', () => { startWords(tijdB, week39woordArray53)}, false);
-buttonC.addEventListener('click', () => { startWords(tijdC, week39woordArray68)}, false);
-buttonD.addEventListener('click', () => { startWords(tijdD, week39woordArray32)}, false);
-buttonE.addEventListener('click', () => { startWords(tijdE, week39woordArray53)}, false);
-buttonF.addEventListener('click', () => { startWords(tijdF, week39woordArray68)}, false);
-buttonG.addEventListener('click', () => { startWords(tijdG, week39woordArray32)}, false);
-buttonH.addEventListener('click', () => { startWords(tijdH, week39woordArray53)}, false);
-buttonI.addEventListener('click', () => { startWords(tijdI, week39woordArray68)}, false);
+buttonA.addEventListener('click', () => { startWords(tijdA, week5woordArray63)}, false);
+buttonB.addEventListener('click', () => { startWords(tijdB, week5woordArray63)}, false);
+buttonC.addEventListener('click', () => { startWords(tijdC, week5woordArray63)}, false);
+buttonD.addEventListener('click', () => { startWords(tijdD, week5woordArray63)}, false);
+buttonE.addEventListener('click', () => { startWords(tijdE, week5woordArray63)}, false);
+buttonF.addEventListener('click', () => { startWords(tijdF, week5woordArray63)}, false);
+buttonG.addEventListener('click', () => { startWords(tijdG, week5woordArray63)}, false);
+buttonH.addEventListener('click', () => { startWords(tijdH, week5woordArray63)}, false);
+buttonI.addEventListener('click', () => { startWords(tijdI, week5woordArray63)}, false);
 
 
 

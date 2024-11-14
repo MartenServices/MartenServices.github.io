@@ -45,7 +45,7 @@ body {
 /* Screens max:1000px  navbar*/
 
 /* Mobile screens */
-@media (max-width: 740px) {
+@media (max-width: 767px) {
     /* Banner section */
     .banner-container {
         position: relative;
