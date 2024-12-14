@@ -1,133 +1,161 @@
+const start = document.getElementById("start");
+const quizScreen = document.getElementById("quizScreen");
+const quizContainer = document.getElementById('quiz-container');
+const answersList = document.getElementById('answers');
+const next = document.getElementById('nextButton');
 
-//Picking colors Quiz code
-
-//Elements
-const gameDisplay = document.getElementById('game-wrapper')
-const prgssbar = document.getElementById('prgBar');
-const question = document.getElementById('question');
-const firstCard = document.getElementById('cardOne');
-const secondCard = document.getElementById('cardTwo');
-
-
-//Card blueprint
-class Card {
-    constructor(color, img) {
-        this.color = color;
-        this.img = img;
-    }
-
-    color() {
-        return this.color;
-    }
-
-    img() {
-        return this.img;
-    }
+const quizData = {
+    questions: [
+        {
+            question: "Druk op de blauwe auto?",
+            answers: [
+                {option: "/pages/assets/auto-1/blauw-auto.png", isCorrect: true},
+                {option: "/pages/assets/auto-1/bruin-auto.png", isCorrect: false},
+                {option: "/pages/assets/auto-1/geel-auto.png", isCorrect: false},
+            ]
+        },
+        {
+            question: "Druk op de gele auto?",
+            answers: [
+                {option: "/pages/assets/auto-1/rood-auto.png", isCorrect: false},
+                {option: "/pages/assets/auto-1/oranje-auto.png", isCorrect: false},
+                {option: "/pages/assets/auto-1/geel-auto.png", isCorrect: true},
+            ]
+        },
+        {
+            question: "Druk op de paarse auto?",
+            answers: [
+                {option: "/pages/assets/auto-1/oranje-auto.png", isCorrect: false},
+                {option: "/pages/assets/auto-1/paars-auto.png", isCorrect: true},
+                {option: "/pages/assets/auto-1/zwart-auto.png", isCorrect: false},
+            ]
+        },
+        {
+            question: "Druk op de groene auto?",
+            answers: [
+                {option: "/pages/assets/auto-1/groen-auto.png", isCorrect: true},
+                {option: "/pages/assets/auto-1/grijs-auto.png", isCorrect: false},
+                {option: "/pages/assets/auto-1/rood-auto.png", isCorrect: false},
+            ]
+        },
+        {
+            question: "Druk op de zwarte auto?",
+            answers: [
+                {option: "/pages/assets/auto-1/grijs-auto.png", isCorrect: false},
+                {option: "/pages/assets/auto-1/zwart-auto.png", isCorrect: true},
+                {option: "/pages/assets/auto-1/paars-auto.png", isCorrect: false},
+            ]
+        },
+        {
+            question: "Druk op de rode auto?",
+            answers: [
+                {option: "/pages/assets/auto-1/groen-auto.png", isCorrect: false},
+                {option: "/pages/assets/auto-1/blauw-auto.png", isCorrect: false},
+                {option: "/pages/assets/auto-1/rood-auto.png", isCorrect: true},
+            ]
+        },
+        {
+            question: "Druk op de oranje auto?",
+            answers: [
+                {option: "/pages/assets/auto-1/oranje-auto.png", isCorrect: true},
+                {option: "/pages/assets/auto-1/geel-auto.png", isCorrect: false},
+                {option: "/pages/assets/auto-1/bruin-auto.png", isCorrect: false},
+            ]
+        },
+        {
+            question: "Druk op de bruine auto?",
+            answers: [
+                {option: "/pages/assets/auto-1/rood-auto.png", isCorrect: false},
+                {option: "/pages/assets/auto-1/paars-auto.png", isCorrect: false},
+                {option: "/pages/assets/auto-1/bruin-auto.png", isCorrect: true},
+            ]
+        },
+        {
+            question: "Druk op de witte auto?",
+            answers: [
+                {option: "/pages/assets/auto-1/grijs-auto.png", isCorrect: false},
+                {option: "/pages/assets/auto-1/wit-auto.png", isCorrect: true},
+                {option: "/pages/assets/auto-1/zwart-auto.png", isCorrect: false},
+            ]
+        }
+    ]
 }
 
 
-//Colors images of cars
-const blue = new Image();
-blue.src = '../../assets/auto-1/blauw-auto.png';
-const black =  new Image();
-black.src = '../../assets/auto-1/zwart-auto.png';
-const orange = new Image();
-orange.src = '../../assets/auto-1/oranje-auto.png';
-const yellow = new Image();
-yellow.src = '../../assets/auto-1/geel-auto.png';
-const purple = new Image();
-purple.src = '../../assets/auto-1/paars-auto.png';
-const green = new Image();
-green.src = '../../assets/auto-1/groen-auto.png';
-const red = new Image();
-red.src = '../../assets/auto-1/rood-auto.png';
-const brown = new Image();
-brown.src = '../../assets/auto-1/bruin-auto.png';
-const grey = new Image();
-grey.src = '../../assets/auto-1/grijs-auto.png';
-const white = new Image();
-white.src = '../../assets/auto-1/wit-auto.png';
+start.addEventListener('click', () => {
+    start.remove();
+    quizContainer.style.display = "grid";
+    displayQuestions();
+});
 
-//Mak
-const blueCar = new Card('blue', blue);
-const blackCar = new Card('black', black);
-const orangeCar = new Card('orange', orange);
-const yellowCar = new Card('yellow', yellow);
-const purpleCar = new Card('purple', purple);
-const greenCar = new Card('green', green);
-const redCar = new Card('red', red);
-const brownCar = new Card('brown', brown);
-const greyCar = new Card('grey', grey);
-const whiteCar = new Card('white', white);
+let currentQuestionIndex = 0;
 
-//Questions
+function displayQuestions() {
+    const currentQuestion = quizData.questions[currentQuestionIndex];
+    const question = document.createElement('p')
+    question.id = 'question';
+    question.innerHTML = currentQuestion.question;
+    quizContainer.appendChild(question);
+    quizContainer.appendChild(answersList);
+    answersList.innerHTML = ''; //clear precious answers
 
-const questions = [
-    {
-        id: 0,
-        question: 'Druk op de blauwe auto.',
-        options: [blueCar, greenCar],
-        correct: 'blue'
-    },
-    {
-        id: 1,
-        question: 'Druk op de rode auto.',
-        options: [redCar, yellowCar],
-        correct: 'red'
-    },
-    {
-        id: 2,
-        question: 'Druk op de groene auto.',
-        options: [greenCar, blackCar],
-        correct: 'green'
-    },
-    {
-        id: 3,
-        question: 'Druk op de paarse auto.',
-        options: [purpleCar, orangeCar],
-        correct: 'purple'
-    },
-    {
-        id: 4,
-        question: 'Druk op de gele auto.',
-        options: [yellowCar, whiteCar],
-        correct: 'yellow'
-    },
-    {
-        id: 5,
-        question: 'Druk op de bruine auto.',
-        options: [brownCar, greenCar],
-        correct: 'brown'
-    },
-    {
-        id: 6,
-        question: 'Druk op de grijze auto.',
-        options: [greyCar, blueCar],
-        correct: 'grey'
-    },
-    {
-        id: 7,
-        question: 'Druk op de oranje auto.',
-        options: [orangeCar, purpleCar],
-        correct: 'orange'
-    },
-    {
-        id: 8,
-        question: 'Druk op de witte auto.',
-        options: [whiteCar, blackCar],
-        correct: 'white'
-    },
-    {
-        id: 9,
-        question: 'Druk op de zwarte auto.',
-        options: [blackCar, greyCar],
-        correct: 'black'
-    },
-]
+    currentQuestion.answers.forEach((answer, index) => {
+        const btn = document.createElement('button');
+        const img = document.createElement('img');
+        btn.appendChild(img);
+        img.classList.add('option')
+        img.src = answer.option;
+        img.alt = "answer option";
+        img.onclick = () => checkAnswer(answer.isCorrect, answersList);
+        answersList.appendChild(img);
+    });
+};
 
-question.innerHTML =  questions[0].question;
-firstCard.appendChild(blueCar.img);
-secondCard.appendChild(greenCar.img);
+function checkAnswer(isCorrect, answersList) {
+    answersList.innerHTML = '';
+    if (isCorrect){
+        const correct = document.createElement('i');
+        correct.className = 'fa-solid fa-check';
+        correct.id = 'correct';
+        correct.style.display = 'block';
+        quizContainer.appendChild(correct);
+        quitOrAgain();
+    } else {
+        const incorrect = document.createElement('i');
+        incorrect.className = "fa-solid fa-xmark";
+        incorrect.id = 'incorrect';
+        incorrect.style.display = 'block';
+        quizContainer.appendChild(incorrect); 
+        quitOrAgain();
+    }
+};
 
+function nextQuestion() {
+    currentQuestionIndex++; 
+    quizContainer.innerHTML = '';
+    if (currentQuestionIndex < quizData.questions.length) {
+      displayQuestions();
+    } else {
+      alert('Quiz finished!');
+    }
+  }
 
-console.log(whiteCar.color)
+function quitOrAgain() {
+
+    if ((currentQuestionIndex + 1) < quizData.questions.length) {
+        next.style.display = 'block';
+        quizContainer.appendChild(next);
+    } else {
+        const quit = document.createElement('a');
+        const again = document.createElement('a');
+        const fontAwe = document.createElement('i');
+        fontAwe.className = 'fa-solid fa-rotate-right';
+        quit.innerText = 'quit';
+        quit.href = '/pages/exercises/exercises.html';
+        quizContainer.appendChild(quit);
+        again.innerHTML = 'Opnieuw';
+        again.appendChild(fontAwe);
+        again.href = '/pages/exercises/shapes-colors/pickingColorsQuiz.html';
+        quizContainer.appendChild(again);
+    };
+};

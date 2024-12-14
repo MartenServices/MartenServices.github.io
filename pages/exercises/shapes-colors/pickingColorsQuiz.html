@@ -9,19 +9,13 @@
     <title>Kleuren Quiz</title>
 </head>
 <body>
-    <div class="main-wrapper">
-        <div class="question-wrapper">
-            <div id="prgBar" class="progress-bar"></div>
-            <p id="question" class="question"></p>
+    <div id="quizScreen" class="main-wrapper">
+        <button id="start" class="start button" type="button" value="Start quiz">Start quiz</button>
+        <div id="quiz-container">
+            <div><p id="question"></p><button type="button" id="question-sound"><i class="fa-solid fa-volume-high"></i></button></div>
+            <div class="answers" id="answers"></div>
         </div>
-        <div class="answers">
-            <button id="cardOne" class="card one"></button>
-            <button id="cardTwo" class="card two"></button>
-        </div>
-        <button class="nxt-btn">>>></button>
-        <div class="game-menu-wrapper">
-            menu komt hier
-        </div>
+        <button id="nextButton" onclick="nextQuestion()">Next Question</button>
     </div>
 </body>
 </html>

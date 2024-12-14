@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 *,
 *::before,
 *::after {
@@ -22,71 +24,78 @@
 }
 
 .main-wrapper {
-    width: 100%;
-    height: 100dvh;
-    padding: .4rem;
-    background-color: var(--main-grey);
-}
-
-.progress-bar {
-    grid-area: progresbar;
-    width: 80%;
-    margin-top: .8rem;
-    margin-inline: auto;
-    border: var(--main-bc-prgbar) solid 2px;
-    border-radius: var(--main-br-10);
-    background: linear-gradient(90deg, green 1%, var(--main-white)4%);
-}
-
-.question {
-    width: 80%;
-    margin-block: .8rem;
-    margin-inline: auto;
-    text-align: center;
-}
-
-.card{
-    display: flex;
+    display: grid;
     justify-content: center;
-    position: relative;
-    width: 50%;
-    margin-inline: auto;
-    border: #1c1c1c 1px solid;
-    border-radius: var(--main-br-10);
-    box-shadow: var(--main-white) 1px 2px 2px inset,
-        var(--main-black) 4px 2px 3px inset,
-        var(--main-grey) 1px 2px 2px,
-        var(--main-black) 4px 2px 5px;
-    margin-bottom: 2rem;
-    cursor: pointer;
-}
-
-.card:hover,
-.card:focus,
-.card:focus-visible {
-    animation: cardSelect 1s forwards;
-}
-
-@keyframes cardSelect {
-    from {
-        scale: 1;
-    }
-    to {
-        scale: .92;
-    }
-}
-
-.card img {
+    align-items: center;
+    height: 100vh;
     width: 100%;
-    object-fit: cover;
-    aspect-ratio: 1 / 1;
+    padding: .4rem;
+    background-color: #adebb3;
+
 }
 
-.nxt-btn {
-    display: none;
-    grid-area: nxt-btn;
-    width: 30vw;
-    margin-inline: auto;
-    margin-bottom: 1rem;
-    text-align: center;
+a {
+    display: inline;
 }
+
+/* 
+/*
+    All buttons
+*/
+.button {
+    font-family: "Montserrat";
+    font-size: 2rem;
+    border-color: transparent;
+}
+
+.start {
+    padding: 4rem;
+    border-top-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: var(--main-red);
+}
+
+.start:hover,
+.start:focus,
+.start:active {
+    background-color: var(--main-green);
+}
+
+#nextButton {
+    display: none;
+}
+
+
+#quiz-container {
+    display: none;
+    margin-inline: auto;
+    background-color: #e0e0e0;
+    justify-items: center;
+    margin-inline: auto;
+}   
+
+#question{
+    font-family: 'Montserrat';
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: .8rem;
+}
+
+.answers {
+    display: grid;
+}
+
+.option {
+    width: 200px;
+}
+
+#correct, #incorrect {
+    display: none;
+    color: var(--main-green);
+    font-size: 5.4rem;  
+}
+
+#incorrect {
+    color: var(--main-red);
+}
+
